@@ -1,4 +1,4 @@
-binary-string
+Binary String
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,43 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-binary-string' );
+var isBinaryString = require( 'validate.io-binary-string' );
 ```
 
-#### foo( value )
+#### isBinaryString( value )
 
-What does this function do?
+Validates if a `value` is a binary `string`; i.e., a character sequence of `1`'s and `0`'s.
+
+``` javascript
+var value = '1000101';
+
+var bool = isBinaryString( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-binary-string' );
+var isBinaryString = require( 'validate.io-binary-string' );
+
+console.log( isBinaryString( '1' ) );
+// returns true
+
+console.log( isBinaryString( '0' ) );
+// returns true
+
+console.log( isBinaryString( '101010101001' ) );
+// returns true
+
+console.log( isBinaryString( '' ) );
+// returns false
+
+console.log( isBinaryString( 'beep' ) );
+// returns false
+
+console.log( isBinaryString( null ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

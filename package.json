@@ -26,12 +26,22 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "is",
+    "binary",
+    "string",
+    "isstring",
+    "isbinary",
+    "binarystring",
+    "isvalid"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/binary-string/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-string-primitive": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",
